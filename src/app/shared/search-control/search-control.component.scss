@@ -1,0 +1,15 @@
+input[type=search] {
+    height: 52px;
+    width: 100%;
+    padding: 0 16px;
+}
+
+.search-icon {
+    height: 52px;
+    width: 52px;
+    background: linear-gradient(45deg, rgb(153, 51, 255) 0%, rgb(255, 102, 102) 100%);
+    border-radius: 4px;
+    cursor: pointer;
+    content: url('../../../assets/icons/search-icon.svg');
+}
+

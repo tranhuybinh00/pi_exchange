@@ -1,0 +1,31 @@
+@for $i from 0 through 10 {
+    .m--#{$i} {
+        margin: #{$i * 4}px !important;
+    }
+
+    .m__t--#{$i} {
+        margin-top: #{$i * 4}px !important;
+    }
+
+    .m__b--#{$i} {
+        margin-bottom: #{$i * 4}px !important;
+    }
+
+    .m__s--#{$i} {
+        margin-left: #{$i * 4}px !important;
+    }
+
+    .m__e--#{$i} {
+        margin-right: #{$i * 4}px !important;
+    }
+
+    .gap--#{$i} {
+        gap: #{$i * 4}px !important;
+    }
+}
+
+.w {
+    &--100 {
+        width: 100%;
+    }
+}

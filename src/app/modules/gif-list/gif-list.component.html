@@ -1,0 +1,16 @@
+<div class="d--flex flex__direction--row">
+    <button class="m__e--4">Upload</button>
+    <app-search-control></app-search-control>
+</div>
+
+<div 
+    class="m__t--3 w--100 d--flex flex__direction--row flex__wrap pos--relative gap--4" 
+    scrollTracker 
+    (scrollingFinished)="onScrollingFinished()"
+>
+    <app-gif-item 
+        *ngFor="let gif of gifs; let i = index"
+        [image]="gif.images['original']"
+        [row]="gifRow(i)"
+    ></app-gif-item>
+</div>

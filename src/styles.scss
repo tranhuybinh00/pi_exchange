@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/styles';
+
+html,
+body {
+    max-width: 1040px;
+    margin: 0 auto;
+    background-color: rgb(18, 18, 18);
+    font-size: 16px;
+    height: 100%;
+    font-weight: 400;
+}

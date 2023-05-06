@@ -1,0 +1,39 @@
+.d {
+    &--flex {
+        display: flex;
+    }
+
+    &--block {
+        display: block;
+    }
+}
+
+.flex {
+    &__direction {
+        &--col {
+            flex-direction: column;
+        }
+
+        &--row {
+            flex-direction: row;
+        }
+    }
+
+    &__no-wrap {
+        flex-wrap: nowrap;
+    }
+
+    &__wrap {
+        flex-wrap: wrap;
+    }
+}
+
+.pos {
+    &--relative {
+        position: relative;
+    }
+
+    &--absolute {
+        position: absolute;
+    }
+}
