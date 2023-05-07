@@ -1,4 +1,4 @@
 <div class="d--flex flex__direction--row">
-    <input type="search" placeholder="'Please type something'">
-    <div class="search-icon"></div>
+    <input type="search" placeholder="'Please type something'" [(ngModel)]="text" (keyup.enter)="onSearch()">
+    <div class="search-icon" (click)="onSearch()"></div>
 </div>

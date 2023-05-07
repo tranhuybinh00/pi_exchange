@@ -37,3 +37,11 @@
         position: absolute;
     }
 }
+
+.justify {
+    &__content {
+        &--center {
+            justify-content: center;
+        }
+    }
+}

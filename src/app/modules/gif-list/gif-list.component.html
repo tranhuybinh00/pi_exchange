@@ -1,16 +1,22 @@
 <div class="d--flex flex__direction--row">
     <button class="m__e--4">Upload</button>
-    <app-search-control></app-search-control>
+    <app-search-control (doSearch)="doSearch($event)"></app-search-control>
 </div>
 
-<div 
+<div
     class="m__t--3 w--100 d--flex flex__direction--row flex__wrap pos--relative gap--4" 
     scrollTracker 
     (scrollingFinished)="onScrollingFinished()"
 >
-    <app-gif-item 
-        *ngFor="let gif of gifs; let i = index"
-        [image]="gif.images['original']"
-        [row]="gifRow(i)"
-    ></app-gif-item>
+    <ng-container *ngIf="gifs.length; else noGifs">
+        <app-gif-item 
+            *ngFor="let gif of gifs; let i = index"
+            [image]="gif.images['original']"
+            [row]="gifRow(i)"
+        ></app-gif-item>
+    </ng-container>
 </div>
+
+<ng-template #noGifs>
+    <div class="d--flex justify__content--center no-gifs w--100">No GIFs found for {{paginator.q}} Try searching for Stickers instead?</div>
+</ng-template>
