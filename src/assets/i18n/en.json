@@ -1,0 +1,11 @@
+{
+    "SEARCH_PLACEHOLDER": "Please type something",
+    "LIST": {
+        "UPLOAD": "Upload",
+        "NO_GIF": "No GIFs found for {{text}} Try searching for Stickers instead?"
+    }, 
+    "DETAIL": {
+        "USER_NAME": "User Name: {{name}}",
+        "RATING": "Rating: {{rating}}"
+    }
+}

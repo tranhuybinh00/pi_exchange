@@ -1,5 +1,5 @@
 <div class="d--flex flex__direction--row">
-    <button class="m__e--4">Upload</button>
+    <button class="m__e--4">{{'LIST.UPLOAD' | translate }}</button>
     <app-search-control (doSearch)="doSearch($event)"></app-search-control>
 </div>
 
@@ -19,5 +19,5 @@
 </div>
 
 <ng-template #noGifs>
-    <div class="d--flex justify__content--center w--100">No GIFs found for {{paginator.q}} Try searching for Stickers instead?</div>
+    <div class="d--flex justify__content--center w--100">{{'LIST.NO_GIF' | translate: {'text': paginator.q} }}</div>
 </ng-template>

@@ -22,6 +22,6 @@
         <div *ngIf="overload" class="tag--more" (click)="loadTagMore()" >+{{gif.tags.length - maxTag}}</div>
     </div>
 
-    <div class="m__t--6">User Name: {{gif.username}}</div>
-    <div class="m__t--6">Rating: {{gif.rating}}</div>
+    <div class="m__t--6">{{'DETAIL.USER_NAME' | translate: {'name': gif.username} }}</div>
+    <div class="m__t--6">{{'DETAIL.RATING' | translate: {'rating': gif.rating} }}</div>
 </div>

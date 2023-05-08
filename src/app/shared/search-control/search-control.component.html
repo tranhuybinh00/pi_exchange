@@ -1,5 +1,5 @@
 <div class="d--flex flex__direction--row">
-    <input type="search" placeholder="'Please type something'" [(ngModel)]="text" (change)="onSearch()">
+    <input type="search" [placeholder]="'SEARCH_PLACEHOLDER' | translate" [(ngModel)]="text" (change)="onSearch()">
     <button class="search-icon" (click)="onSearch()" disabled="!text">
         <img src="../../../assets/icons/search-icon.svg"/>
     </button>

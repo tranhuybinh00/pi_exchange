@@ -8,3 +8,6 @@ export const COLORS = [
 export const GIF_IMAGE_TYPE = 'image/webp';
 export const GIF_IMAGE_WIDTH = 248;
 export const MAX_TAG = 5;
+export const LANGUAGES = {
+    English: 'en'
+}
