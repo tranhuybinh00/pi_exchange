@@ -26,7 +26,8 @@
     "paths": {
       "@module": ["./src/app/modules/index.ts"],
       "@shared": ["./src/app/shared"],
-      "@constant": ["./src/app/constants/index.ts"]
+      "@constant": ["./src/app/constants/index.ts"],
+      "@directive": ["./src/app/directives/index.ts"],
     }
   },
   "angularCompilerOptions": {

@@ -1,4 +1,6 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { GIF_IMAGE_TYPE, GIF_IMAGE_WIDTH } from '@constant';
+import { getRandomColor } from 'src/app/utils/gif.util';
 
 @Component({
   selector: 'app-gif-item',
@@ -6,24 +8,28 @@ import { Component, HostListener, Input } from '@angular/core';
   styleUrls: ['./gif-item.component.scss']
 })
 export class GifItemComponent {
-  private _colors: string[] = [
-    '#00FF99',
-    '#00CCFF',
-    '#FF6666',
-    '#9933FF'
-  ];
-  @Input() image: any;
-  @Input() type: string = 'image/webp';
+  @Input() gif: any;
   @Input() row: number = 0;
 
-  customWidth: number = 248;
+  type = GIF_IMAGE_TYPE;
+  customWidth = GIF_IMAGE_WIDTH;
   randomColor: string = '';
 
+  @Output() gifCached = new EventEmitter<void>();
+
   constructor() {
-    this.randomColor = this._colors[Math.floor(Math.random() * this._colors.length)];
+    this.randomColor = getRandomColor();
   }
 
   get customHeight(): number {
     return Math.round(this.customWidth * (this.image.height / this.image.width));
+  }
+
+  get image(): any {
+    return this.gif.images['original'];
+  }
+
+  cacheGif(): void {
+    this.gifCached.emit();
   }
 }

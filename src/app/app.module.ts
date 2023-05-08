@@ -5,7 +5,7 @@ import { AppRouitngModule } from './app-rouitng.module';
 import { SharedModule } from './shared/shared.module';
 import { GifDetailComponent, GifListComponent, GifItemComponent } from '@module';
 import { HttpClientModule } from '@angular/common/http';
-import { ScrollTrackerDirective } from './directives/scroll-tracker.directive';
+import { DivClampDirective, ScrollTrackerDirective } from '@directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,8 @@ import { ScrollTrackerDirective } from './directives/scroll-tracker.directive';
     GifListComponent,
     GifDetailComponent,
     GifItemComponent,
-    ScrollTrackerDirective
+    ScrollTrackerDirective,
+    DivClampDirective
   ],
   imports: [
     BrowserModule,

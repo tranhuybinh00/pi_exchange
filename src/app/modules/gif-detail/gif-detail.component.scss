@@ -1,0 +1,50 @@
+@import '../../../assets/styles';
+
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 24px 0;
+    picture {
+        margin: 0 auto;
+    }
+}
+
+.tag-overview {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 24px;
+    width: $content-width;
+    overflow: hidden;
+
+    .tag {
+        &--item {
+            background-color: $tag-background;
+            padding: 16px;
+            border-radius: 20px;
+            white-space: nowrap;
+        }
+        
+        &--more {
+            padding: 16px;
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.back-icon {
+    position: absolute;
+    top: 24px;
+    left: 8px;
+    cursor: pointer;
+    img {
+        width: 24px;
+        height: 24px;
+        transform: rotate(180deg);
+    }
+}

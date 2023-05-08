@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { API } from '../constants/api-url';
+import { API } from '@constant';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GifService {
+  gifDetailBehaviorSubject = new BehaviorSubject<any>(null);
   constructor(
     private _http: HttpClient
   ) { }

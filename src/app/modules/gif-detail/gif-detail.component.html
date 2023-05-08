@@ -1,1 +1,27 @@
-<p>gif-detail works!</p>
+<div *ngIf="gif">
+    <div class="back-icon" (click)="onBack()">
+        <img src="../../../assets/icons/arrow-icon.svg">
+    </div>
+    <picture
+        [style.width.px]="image.width"
+        [style.height.px]="image.height"
+        class="d--block"
+    >
+        <source [type]="type" [srcset]="image.url">
+        <img
+            [src]="image.url" 
+            [alt]="image.alt"
+            [style.width.px]="image.width"
+            [style.height.px]="image.height"
+            [style.background-color]="randomColor"
+        >
+    </picture>
+    
+    <div class="tag-overview" [ngClass]="{'flex__wrap': !overload}" clamp (overload)="onOverCountChanged()">
+        <div class="tag--item" *ngFor="let tag of tagFiltered">#{{tag}}</div>
+        <div *ngIf="overload" class="tag--more" (click)="loadTagMore()" >+{{gif.tags.length - maxTag}}</div>
+    </div>
+
+    <div class="m__t--6">User Name: {{gif.username}}</div>
+    <div class="m__t--6">Rating: {{gif.rating}}</div>
+</div>

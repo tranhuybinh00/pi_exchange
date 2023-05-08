@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { GifService } from 'src/app/services/gif.service';
 
 @Component({
@@ -39,6 +39,10 @@ export class GifListComponent implements OnInit {
     } else {
       this._loadGifs(this.paginator);
     }
+  }
+
+  onGifCached(gif: any): void {
+    this._gifSrv.gifDetailBehaviorSubject.next(gif);
   }
   
   private _loadGifs(paginator: any): void {
