@@ -10,6 +10,8 @@ export class SearchControlComponent {
   text: string = '';
 
   onSearch(): void {
-    this.doSearch.emit(this.text);
+    if (this.text) {
+      this.doSearch.emit(this.text);
+    }
   }
 }
