@@ -12,7 +12,6 @@
         <app-gif-item 
             *ngFor="let gif of gifs; let i = index"
             [gif]="gif"
-            [row]="gifRow(i)"
             (gifCached)="onGifCached(gif)"
         ></app-gif-item>
     </ng-container>

@@ -27,10 +27,6 @@ export class GifListComponent implements OnInit {
     this._loadGifs(this.paginator);
   }
 
-  gifRow(index: number): number {
-    return Math.trunc(index / 4);
-  }
-
   doSearch(text: string): void {
     this.paginator.q = text;
     this.paginator.offset = 0;

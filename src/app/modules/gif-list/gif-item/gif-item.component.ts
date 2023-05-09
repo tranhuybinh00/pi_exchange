@@ -9,7 +9,6 @@ import { getRandomColor } from 'src/app/utils/gif.util';
 })
 export class GifItemComponent {
   @Input() gif: any;
-  @Input() row: number = 0;
 
   type = GIF_IMAGE_TYPE;
   customWidth = GIF_IMAGE_WIDTH;
