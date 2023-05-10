@@ -20,7 +20,6 @@ export class GifService {
         pingback_id: '187ea6b18198c9cb'
       }
     };
-
     return this._http.get<any>(API.GIF.LIST, options);
   }
 

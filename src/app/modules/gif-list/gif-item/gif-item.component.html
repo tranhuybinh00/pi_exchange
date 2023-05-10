@@ -4,11 +4,11 @@
         [style.width.px]="customWidth"
         [style.height.px]="customHeight"
     >
-        <source [type]="type" [srcset]="image.url">
+        <source [type]="type" [srcset]="image?.url">
         <img
             class="image-item"
-            [src]="image.url" 
-            [alt]="image.alt"
+            [src]="image?.url" 
+            [alt]="image?.alt"
             [style.width.px]="customWidth"
             [style.height.px]="customHeight"
             [style.background-color]="randomColor"

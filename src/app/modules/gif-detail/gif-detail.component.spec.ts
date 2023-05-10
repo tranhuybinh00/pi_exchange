@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { GifDetailComponent } from './gif-detail.component';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('GifDetailComponent', () => {
   let component: GifDetailComponent;
@@ -8,7 +8,8 @@ describe('GifDetailComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GifDetailComponent ]
+      declarations: [ GifDetailComponent ],
+      imports: [ HttpClientModule ]
     })
     .compileComponents();
 

@@ -21,11 +21,11 @@ export class GifItemComponent {
   }
 
   get customHeight(): number {
-    return Math.round(this.customWidth * (this.image.height / this.image.width));
+    return Math.round(this.customWidth * (this.image?.height / this.image?.width));
   }
 
   get image(): any {
-    return this.gif.images['original'];
+    return this.gif?.images['original'];
   }
 
   cacheGif(): void {
